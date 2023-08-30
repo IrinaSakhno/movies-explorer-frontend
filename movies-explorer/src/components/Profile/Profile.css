@@ -1,0 +1,13 @@
+.profile {
+    background-color: #202020;
+    width: 100vw;
+    height: 100vh;
+}
+
+.profile__container {
+    padding: 74px 0 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
