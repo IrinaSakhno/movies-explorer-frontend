@@ -63,12 +63,18 @@
 
 .header-authorized__burger-menu {
   display: none;
-}
-
-.header-authorized__burger-logo {
   width: 44px;
   height: 44px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../images/burger-menu.svg");
 }
+
+/* .header-authorized__burger-logo {
+  width: 44px;
+  height: 44px;
+} */
 
 @media screen and (max-width: 1279px) {
   .header-authorized__menu {

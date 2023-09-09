@@ -1,52 +1,57 @@
+import React from "react";
+import { Link, NavLink } from 'react-router-dom';
 import "./HeaderAuthorized.css";
 import HeaderLogo from "../../images/c-logo.svg";
 import AccountLogo from "../../images/account-logo.svg";
-import BurgerMenu from "../../images/burger-menu.svg";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = () => {
   return (
     <section className="header-authorized">
+            <BurgerMenu />
       <div className="header-authorized__container">
-        <img src={HeaderLogo} alt="logo" className="header-authorized__logo" />
+      <Link to="/"> 
+          <img src={HeaderLogo} alt="project logo" className="header-authorized__logo" />
+        </Link>
         <div className="header-authorized__menu">
           <ul className="header-authorized__links">
             <li className="header-authorized__link">
-              <a
-                href=" "
-                className="header-authorized__hyperlink header-authorized__hyperlink_active link"
+              <NavLink
+                to="/movies"
+                className={({isActive}) => `header-authorized__hyperlink link ${isActive ? "header-authorized__hyperlink_active" : ""}`}
               >
                 Фильмы
-              </a>
+              </NavLink>
             </li>
             <li className="header-authorized__link">
-              <a href=" " className="header-authorized__hyperlink link">
+              <NavLink
+                to="/saved-movies"
+                className={({isActive}) => `header-authorized__hyperlink link ${isActive ? "header-authorized__hyperlink_active" : ""}`}
+              >
                 Сохранённые фильмы
-              </a>
+              </NavLink>
             </li>
           </ul>
           <div className="header-authorized__profile">
-            <a
-              href=" "
-              className="header-authorized__hyperlink header-authorized__hyperlink_active link"
+            <NavLink
+                to="/profile"
+                className={({isActive}) => `header-authorized__hyperlink link ${isActive ? "header-authorized__hyperlink_active" : ""}`}
             >
               Аккаунт
-            </a>
-            <a href=" " className=" ">
+            </NavLink>
+            <NavLink
+                to="/profile"
+            >
               <img
                 src={AccountLogo}
-                alt="account"
+                alt="account logo"
                 className="header-authorized__account-logo link"
               />
-            </a>
+            </NavLink>
           </div>
         </div>
-        <a href=" " className="header-authorized__burger-menu">
-          <img
-            src={BurgerMenu}
-            alt="meniu symbol"
-            className="header-authorized__burger-logo link"
-          />
-        </a>
+        <button type="button" className="header-authorized__burger-menu">
+        </button>
       </div>
     </section>
   );

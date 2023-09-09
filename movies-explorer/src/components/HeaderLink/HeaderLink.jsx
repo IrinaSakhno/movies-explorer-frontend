@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./HeaderLink.css";
 
 const HeaderLink = ({ name, link, style }) => {
   return (
     <li className="header-link">
-      <a href={link} className={style}>
+      <Link to={link} className={style}>
         {name}
-      </a>
+      </Link>
     </li>
   );
 };
