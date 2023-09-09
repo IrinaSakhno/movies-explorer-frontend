@@ -41,6 +41,9 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.21;
+    background-color: transparent;
+    border: none;
+    padding: 0;
 }
 
 @media screen and (max-width: 1279px) {
@@ -49,7 +52,7 @@
     }
 }
   
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .not-found__container {
         padding: 329px 0 30px;
     }

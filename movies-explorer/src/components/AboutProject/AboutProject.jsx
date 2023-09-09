@@ -8,7 +8,7 @@ const AboutProject = () => {
       <div className="about-project__container">
         <MainTitle title="О проекте" />
 
-        <ul class="about-project__steps">
+        <ul className="about-project__steps">
           {[
             {
               name: "Дипломный проект включал 5 этапов",

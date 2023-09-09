@@ -4,8 +4,8 @@ import "./ProjectDetails.css";
 const ProjectDetails = ({ name, about }) => {
   return (
     <li className="project-details">
-      <h3 class="project-details__name">{name}</h3>
-      <p class="project-details__description">{about}</p>
+      <h3 className="project-details__name">{name}</h3>
+      <p className="project-details__description">{about}</p>
     </li>
   );
 };

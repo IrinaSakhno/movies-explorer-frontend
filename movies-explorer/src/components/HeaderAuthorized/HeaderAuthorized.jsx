@@ -6,6 +6,11 @@ import AccountLogo from "../../images/account-logo.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = () => {
+  function openBurgerMenu() {
+    var burgerMenu = document.getElementById("burger-menu");
+    burgerMenu.classList.add("burger-menu_opened");
+  }
+
   return (
     <section className="header-authorized">
             <BurgerMenu />
@@ -50,7 +55,7 @@ const Header = () => {
             </NavLink>
           </div>
         </div>
-        <button type="button" className="header-authorized__burger-menu">
+        <button type="button" onClick={openBurgerMenu} className="header-authorized__burger-menu">
         </button>
       </div>
     </section>

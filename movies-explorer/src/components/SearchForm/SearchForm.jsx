@@ -10,6 +10,8 @@ const SearchForm = () => {
           className="search__form-field"
           placeholder="Фильм"
           name="movie"
+          minLength="2"
+          maxLength="40"
           required
         />
         <button type="submit" className="search__submit-button link">

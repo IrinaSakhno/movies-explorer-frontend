@@ -31,7 +31,7 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .project-details {
         max-width: 284px;
         gap: 16px;

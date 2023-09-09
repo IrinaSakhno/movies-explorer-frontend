@@ -24,6 +24,7 @@
     letter-spacing: -1.2px;
     margin: 0;
     max-width: 880px;
+    text-decoration: none;
 }
 
 .portfolio-project__arrow {
@@ -50,7 +51,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .portfolio-project__name {
         font-size: 18px;
         line-height: 1.55;

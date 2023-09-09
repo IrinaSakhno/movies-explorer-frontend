@@ -4,12 +4,17 @@ import "./BurgerMenu.css";
 import AccountLogo from "../../images/account-logo.svg";
 
 const BurgerMenu = () => {
+  function closeBurgerMenu() {
+    var burgerMenu = document.getElementById("burger-menu");
+    burgerMenu.classList.remove("burger-menu_opened");
+  }
+
   return (
     <>
-      <div className="burger-menu">
+      <div className="burger-menu" id="burger-menu">
         <div className="burger-menu__overlay"></div>
         <div className="burger-menu__container">
-          <button className="burger-menu__close-button link" type="button"></button>
+          <button onClick={closeBurgerMenu} className="burger-menu__close-button link" type="button"></button>
           <div className="burger-menu__menu">
             <NavLink
                 to="/"

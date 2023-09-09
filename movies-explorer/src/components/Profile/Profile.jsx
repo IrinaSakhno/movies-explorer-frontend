@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./Profile.css";
 import HeaderAuthorized from "../HeaderAuthorized/HeaderAuthorized";
 
@@ -33,6 +34,7 @@ const Profile = ({ name }) => {
                 placeholder="Введите email"
                 minLength="2"
                 maxLength="40"
+                pattern="^\S+@\S+\.\S+$"
                 required
                 // TODO: Подставить значение email
               />
@@ -41,9 +43,9 @@ const Profile = ({ name }) => {
               Редактировать
             </button>
           </form>
-          <button type="button" className="profile__signout-button link">
+          <Link to="/" className="profile__signout-button link">
             Выйти из аккаунта
-          </button>
+          </Link>
         </div>
       </main>
     </>

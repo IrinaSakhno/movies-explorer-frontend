@@ -6,7 +6,7 @@ import RegistrationField from "../RegistrationField/RegistrationField";
 const LoginForm = ({ button }) => {
   return (
     <>
-      <main className="registration-form">
+      <section className="registration-form">
         <div className="registration-form__container">
           <form className="registration-form__form" noValidate>
             <RegistrationField
@@ -29,7 +29,7 @@ const LoginForm = ({ button }) => {
             </button>
           </form>
         </div>
-      </main>
+      </section>
     </>
   );
 };

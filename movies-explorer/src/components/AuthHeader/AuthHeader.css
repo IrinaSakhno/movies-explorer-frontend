@@ -33,7 +33,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .header-auth__container {
         width: 260px;
         align-items: center;

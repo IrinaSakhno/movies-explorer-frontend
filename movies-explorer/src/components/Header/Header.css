@@ -30,7 +30,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .header__container {
         max-width: 292px;
     }

@@ -10,10 +10,10 @@ const Movies = () => {
   return (
     <>
       <HeaderAuthorized />
-      <main className="movies">
+      <section className="movies">
         <SearchForm />
         <MoviesCardList />
-      </main>
+      </section>
       <Footer />
     </>
   );

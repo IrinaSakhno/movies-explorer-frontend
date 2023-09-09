@@ -35,7 +35,7 @@
     }
 }
   
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .auth-navigation {
         margin-top: 14px;
         padding-bottom: 30px;

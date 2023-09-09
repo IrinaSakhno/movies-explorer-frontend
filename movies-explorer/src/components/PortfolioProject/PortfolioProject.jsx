@@ -4,8 +4,8 @@ import "./PortfolioProject.css";
 const PortfolioProject = ({ name, link }) => {
   return (
     <li className="portfolio-project">
-      <p className="portfolio-project__name">{name}</p>
-      <a href={link} className="portfolio-project__arrow">
+      <a href={link} className="portfolio-project__name" target="_blank" rel="noreferrer">{name}</a>
+      <a href={link} className="portfolio-project__arrow" target="_blank" rel="noreferrer">
         &#8599;
       </a>
     </li>

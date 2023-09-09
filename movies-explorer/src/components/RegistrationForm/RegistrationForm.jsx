@@ -5,7 +5,7 @@ import RegistrationField from "../RegistrationField/RegistrationField";
 const RegistrationForm = ({ button }) => {
   return (
     <>
-      <main className="registration-form">
+      <section className="registration-form">
         <div className="registration-form__container">
           <form className="registration-form__form" noValidate>
             <RegistrationField
@@ -19,6 +19,7 @@ const RegistrationForm = ({ button }) => {
               name="email"
               placeholder="Введите e-mail"
               type="email"
+              pattern="^\S+@\S+\.\S+$"
             />
             <RegistrationField
               label="Пароль"
@@ -34,7 +35,7 @@ const RegistrationForm = ({ button }) => {
             </button>
           </form>
         </div>
-      </main>
+      </section>
     </>
   );
 };

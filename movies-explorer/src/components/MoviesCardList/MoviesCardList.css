@@ -9,7 +9,6 @@
   display: grid;
   padding: 0;
   grid-template-columns: repeat(3, 360px);
-  overflow-y: hidden;
   column-gap: 28px;
   row-gap: 32px;
   justify-content: center;
@@ -44,7 +43,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .movies-list__list {
     grid-template-columns: repeat(1, 300px);
     row-gap: 16px;
