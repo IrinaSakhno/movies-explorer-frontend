@@ -115,7 +115,7 @@
 @media screen and (max-width: 767px) {
     .profile__container {
         max-width: 260px;
-        padding: 70px 0 40px;
+        padding: 64px 0 40px;
     }
     .profile__form {
         margin-top: 80px;

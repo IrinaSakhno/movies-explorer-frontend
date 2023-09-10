@@ -23,10 +23,17 @@
     margin-top: 128px;
 }
 
+.registration-form__submit-button_signin {
+    margin-top: 196px;
+}
+
 @media screen and (max-width: 767px) {
     .registration-form__submit-button {
-        margin-top: 286px;
+        margin-top: 215px;
         width: 260px;
         font-size: 12px;
+    }
+    .registration-form__submit-button_signin {
+        margin-top: 285px;
     }
 }

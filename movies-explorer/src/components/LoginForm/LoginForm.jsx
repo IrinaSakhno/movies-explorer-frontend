@@ -23,7 +23,7 @@ const LoginForm = ({ button }) => {
             />
             <button
               type="submit"
-              className="registration-form__submit-button link"
+              className="registration-form__submit-button registration-form__submit-button_signin link"
             >
               {button}
             </button>
