@@ -9,7 +9,7 @@
     flex-direction: column;
     margin: 0 auto;
     width: 396px;
-    gap: 40px
+    gap: 37px
 }
 
 .header-auth__logo {
@@ -33,11 +33,11 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .header-auth__container {
         width: 260px;
         align-items: center;
-        gap: 50px;
+        gap: 46px;
         padding-top: 56px;
     }
     .header-auth__greeting {

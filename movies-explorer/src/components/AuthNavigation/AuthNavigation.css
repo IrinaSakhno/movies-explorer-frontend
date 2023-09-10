@@ -1,6 +1,6 @@
 .auth-navigation {
     display: flex;
-    gap: 8px;
+    gap: 7px;
     margin: 16px auto 0;
     padding-bottom: 70px;
     width: 100%;
@@ -35,7 +35,7 @@
     }
 }
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .auth-navigation {
         margin-top: 14px;
         padding-bottom: 30px;

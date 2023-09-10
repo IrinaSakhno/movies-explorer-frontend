@@ -90,7 +90,6 @@
     width: 100%;
     color: #EE3465;
     text-align: center;
-    font-family: Inter;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
@@ -103,7 +102,7 @@
 
 @media screen and (max-width: 1279px) {
     .profile__container {
-        padding: 236px 0 269px;
+        padding: 231px 0 269px;
     }
     .profile__form {
         margin-top: 96px;
@@ -113,7 +112,7 @@
     }
 }
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .profile__container {
         max-width: 260px;
         padding: 70px 0 40px;

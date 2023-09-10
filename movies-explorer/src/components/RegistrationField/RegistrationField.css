@@ -1,4 +1,4 @@
-.registration-field__container {
+.registration-field {
     display: flex;
     flex-direction: column;
     width: 396px;
@@ -51,8 +51,8 @@
 
 
 
-@media screen and (max-width: 768px) {
-    .registration-field__container {
+@media screen and (max-width: 767px) {
+    .registration-field {
         display: flex;
         flex-direction: column;
         width: 260px;

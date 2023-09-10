@@ -1,12 +1,12 @@
 import "./MovieCard.css";
 import MoviePicture from "../../images/film.jpg";
 
-const MovieCard = ({ title, length, link }) => {
+const MovieCard = ({ title, length, link, altDescription }) => {
   return (
     <li className="movie">
       <div className="movie__about">
         <a className="movie__link" href={link} rel="noreferrer">
-          <h3 className="movie__title link">{title}</h3>
+          <h2 className="movie__title link">{title}</h2>
         </a>
         <p className="movie__length">{length} минут</p>
       </div>
@@ -14,10 +14,10 @@ const MovieCard = ({ title, length, link }) => {
         <img
           className="movie__screenshot link"
           src={MoviePicture}
-          alt="movie screenshot"
+          alt={altDescription}
         />{" "}
       </a>
-      <button className="movie__button movie__button_delete" type="button" />
+      <button className="movie__button movie__button_delete link" type="button" />
     </li>
   );
 };

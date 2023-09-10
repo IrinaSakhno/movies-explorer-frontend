@@ -10,7 +10,7 @@ const Portfolio = () => {
       <div className="portfolio__about">
         <img
           src={ProfilePhoto}
-          alt="Irina's avatar"
+          alt="фотография Ирины"
           className="portfolio__avatar"
         />
         <div className="portfolio__info">
@@ -51,8 +51,8 @@ const Portfolio = () => {
             name: "Одностраничное приложение",
             link: "https://github.com/IrinaSakhno/react-mesto-api-full-gha",
           },
-        ].map((item) => (
-          <PortfolioProject name={item.name} link={item.link} />
+        ].map((item, index) => (
+          <PortfolioProject name={item.name} link={item.link} key={index} />
         ))}
       </ul>
     </section>

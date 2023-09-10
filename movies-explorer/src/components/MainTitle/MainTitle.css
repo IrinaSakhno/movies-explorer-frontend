@@ -17,11 +17,11 @@
     }
 }
 
- @media screen and (max-width: 768px) {
+ @media screen and (max-width: 767px) {
     .main-title {
         padding-bottom: 28px;
         font-size: 18px;
         letter-spacing: -0.72px;
-        max-width: 292px;
+        max-width: 282px;
     }
 }

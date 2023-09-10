@@ -4,7 +4,7 @@ import "./HeaderLink.css";
 
 const HeaderLink = ({ name, link, style }) => {
   return (
-    <li className="header-link">
+    <li className="header__link-item">
       <Link to={link} className={style}>
         {name}
       </Link>

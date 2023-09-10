@@ -71,12 +71,14 @@
 
 @media screen and (max-width: 1279px) {
     .about-project {
-        padding: 90px 0;
+        padding: 85px 0;
         max-width: 680px;
     }
 
     .about-project__steps {
         gap: 30px;
+        max-width: 668px;
+        padding-left: 6px;
     }
 
     .about-project__step-description {
@@ -85,14 +87,18 @@
     }
 
     .about-project__plan {
-        margin-top: 93px;
+        margin: 93px 6px 0;
+        max-width: 708px;
+    }
+    .about-project__frontend {
+        flex: 3.77;
     }
 }
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .about-project {
         padding: 70px 0;
-        max-width: 292px;
+        max-width: 282px;
     }
     
     .about-project__steps {
@@ -104,12 +110,20 @@
 
     .about-project__plan {
         font-size: 11px;
-        margin: 60px auto 0;
+        margin: 61px auto 0;
         max-width: 294px;
     }
 
     .about-project__step-name {
         font-size: 18px;
         letter-spacing: -0.72px;
+    }
+
+    .about-project__frontend {
+        flex: 1.84;
+    }
+
+    .about-project__plan-step {
+        margin-top: 8px;
     }
 }

@@ -4,7 +4,7 @@ import "./RegistrationField.css";
 const RegistrationField = ({ label, name, placeholder, type, pattern, error }) => {
   return (
     <>
-      <div className="registration-field__container">
+      <div className="registration-field">
         <label className="registration-field__label">{label}</label>
         <input
           className="registration-field__form-field"

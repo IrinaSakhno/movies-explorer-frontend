@@ -13,8 +13,8 @@ const Techs = () => {
       </p>
       <ul className="techs__list">
         {["HTML", "CSS", "JS", "React", "Git", "Express.js", "mongo.DB"].map(
-          (item) => (
-            <StackItem title={item} />
+          (item, index) => (
+            <StackItem title={item} key={index} />
           ),
         )}
       </ul>

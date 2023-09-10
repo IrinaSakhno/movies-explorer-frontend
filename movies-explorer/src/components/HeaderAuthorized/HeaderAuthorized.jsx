@@ -12,14 +12,14 @@ const Header = () => {
   }
 
   return (
-    <section className="header-authorized">
+    <header className="header-authorized">
             <BurgerMenu />
       <div className="header-authorized__container">
       <Link to="/"> 
-          <img src={HeaderLogo} alt="project logo" className="header-authorized__logo" />
+          <img src={HeaderLogo} alt="логотип проекта" className="header-authorized__logo" />
         </Link>
-        <div className="header-authorized__menu">
-          <ul className="header-authorized__links">
+        <nav className="header-authorized__menu">
+          <nav className="header-authorized__links">
             <li className="header-authorized__link">
               <NavLink
                 to="/movies"
@@ -36,7 +36,7 @@ const Header = () => {
                 Сохранённые фильмы
               </NavLink>
             </li>
-          </ul>
+          </nav>
           <div className="header-authorized__profile">
             <NavLink
                 to="/profile"
@@ -49,16 +49,16 @@ const Header = () => {
             >
               <img
                 src={AccountLogo}
-                alt="account logo"
+                alt="иконка аккаунта"
                 className="header-authorized__account-logo link"
               />
             </NavLink>
           </div>
-        </div>
+        </nav>
         <button type="button" onClick={openBurgerMenu} className="header-authorized__burger-menu">
         </button>
       </div>
-    </section>
+    </header>
   );
 };
 

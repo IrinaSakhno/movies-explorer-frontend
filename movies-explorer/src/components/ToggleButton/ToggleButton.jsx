@@ -2,11 +2,11 @@ import "./ToggleButton.css";
 
 const ToggleButton = ({ label }) => {
   return (
-    <div className="toggle-button__container">
+    <div className="search__toggle-button-container link">
       <input
         type="checkbox"
         id="toggle-button"
-        className="toggle-button"
+        className="search__toggle-button"
         defaultChecked
       />
       <label for="toggle-button" className="search__text">

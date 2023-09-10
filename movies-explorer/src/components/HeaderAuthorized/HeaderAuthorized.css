@@ -16,7 +16,7 @@
 }
 
 .header-authorized__profile {
-  margin-left: 50px;
+  margin-left: 52px;
   justify-items: center;
   align-items: center;
   display: flex;
@@ -59,7 +59,7 @@
 .header-authorized__account-logo {
   width: 30px;
   height: 30px;
-  margin-left: 13px;
+  margin-left: 14px;
 }
 
 .header-authorized__burger-menu {
@@ -89,7 +89,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-authorized__burger-logo {
     width: 40px;
     height: 43px;

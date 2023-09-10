@@ -17,7 +17,7 @@ const Promo = () => {
           </div>
           <img
             src={WebLogo}
-            alt="World made from words WEB"
+            alt="картинка планеты из слова ВЕБ"
             className="promo__logo"
           />
         </div>

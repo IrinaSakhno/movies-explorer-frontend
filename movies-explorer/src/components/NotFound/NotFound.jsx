@@ -7,15 +7,15 @@ const NotFound = () => {
 
   return (
     <>
-      <section className="not-found">
+      <main className="not-found">
         <div className="not-found__container">
-          <h3 className="not-found__error">404</h3>
+          <h1 className="not-found__error">404</h1>
           <p className="not-found__error-text">Страница не найдена</p>
           <button onClick={() => {navigate(-1)}} className="not-found__button link">
             Назад
           </button>
         </div>
-      </section>
+      </main>
     </>
   );
 };

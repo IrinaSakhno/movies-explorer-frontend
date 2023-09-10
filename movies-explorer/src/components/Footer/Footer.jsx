@@ -3,7 +3,7 @@ import FooterLink from "../FooterLink/FooterLink";
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <footer className="footer">
       <p className="footer__description">
         Учебный проект Яндекс.Практикум х BeatFilm.
       </p>
@@ -18,7 +18,7 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-    </section>
+    </footer>
   );
 };
 

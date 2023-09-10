@@ -29,6 +29,7 @@
     margin: 0;
     align-self: center;
     justify-self: center;
+    margin-top: 20px;
 }
 
 .footer__links {
@@ -40,11 +41,11 @@
   
 @media screen and (max-width: 1279px) {
     .footer {
-        max-width: 668px;
+        max-width: 707px;
     }
 }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .footer {
       max-width: 292px;
       min-height: 154px;

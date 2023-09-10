@@ -8,8 +8,8 @@ const Profile = ({ name }) => {
     <>
       <HeaderAuthorized />
       <main className="profile">
-        <div className="profile__container">
-          <h2 className="profile__title">Привет, {name}!</h2>
+        <section className="profile__container">
+          <h1 className="profile__title">Привет, {name}!</h1>
           <form className="profile__form" noValidate>
             <div className="profile__form-container">
               <label className="profile__form-label">Имя</label>
@@ -46,7 +46,7 @@ const Profile = ({ name }) => {
           <Link to="/" className="profile__signout-button link">
             Выйти из аккаунта
           </Link>
-        </div>
+        </section>
       </main>
     </>
   );

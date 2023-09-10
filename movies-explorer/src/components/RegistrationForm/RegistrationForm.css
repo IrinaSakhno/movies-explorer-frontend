@@ -20,12 +20,13 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 1.21;
-    margin-top: 134px;
+    margin-top: 128px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .registration-form__submit-button {
-        margin-top: 222px;
+        margin-top: 286px;
         width: 260px;
+        font-size: 12px;
     }
 }

@@ -1,7 +1,7 @@
 .portfolio-project {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 19px;
+    padding-bottom: 9px;
     border-bottom: 1px solid #DADADA;
     margin: 0;
 }
@@ -51,7 +51,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .portfolio-project__name {
         font-size: 18px;
         line-height: 1.55;
@@ -63,5 +63,9 @@
         font-size: 18px;
         line-height: 1.55;
         letter-spacing: -0.72px;
+    }
+
+    .portfolio-project {
+        padding-bottom: 19px;
     }
 }

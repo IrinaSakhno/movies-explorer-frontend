@@ -1,5 +1,5 @@
 .portfolio {
-    padding: 110px 0 125px;
+    padding: 110px 0 116px;
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -13,7 +13,7 @@
 }
 
 .portfolio__avatar {
-    min-width: 270px;
+    width: 270px;
     height: 327px;
     border-radius: 10px;
     object-fit: cover;
@@ -54,7 +54,7 @@
 }
 
 .portfolio__github {
-    margin: 99px 0 0;
+    margin: 54px 0 0;
 }
 
 .portfolio__hyperlink{
@@ -74,13 +74,13 @@
     line-height: 1.11;
     font-feature-settings: 'clig' off, 'liga' off;
     max-width: 250px;
-    margin: 101px 0 0;
+    margin: 100px 0 0;
 }
 
 .portfolio__links {
     list-style-type: none;
     padding-inline-start: 0;
-    margin: 50px 0 0;
+    margin: 49px 0 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -88,7 +88,7 @@
 
 @media screen and (max-width: 1279px) {
     .portfolio {
-        padding: 90px 0;
+        padding: 85px 0 81px;
         max-width: 680px;
     }
 
@@ -97,12 +97,14 @@
     }
     
     .portfolio__avatar {
-        width: 255px;
+        width: 253px;
         height: 307px;
+        padding-right: 7px;
     }
 
     .portfolio__info {
         max-width: 348px;
+        padding-left: 6px;
     }
 
     .portfolio__title {
@@ -125,17 +127,22 @@
     }
 
     .portfolio__github {
-        margin-top: 87px;
+        margin-top: 33px;
     }
 
     .portfolio__subtitle {
         margin-top: 91px;
+        padding-left: 6px;
+    }
+
+    .portfolio__links {
+        padding: 0 6px;
     }
 }
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .portfolio {
-        padding: 70px 0;
+        padding: 68px 0 70px;
         max-width: 292px;
     }
 
@@ -147,6 +154,7 @@
 
     .portfolio__about {
         flex-direction: column;
+        gap: 34px;
     }
 
     .portfolio__info {

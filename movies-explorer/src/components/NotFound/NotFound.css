@@ -52,7 +52,7 @@
     }
 }
   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .not-found__container {
         padding: 329px 0 30px;
     }

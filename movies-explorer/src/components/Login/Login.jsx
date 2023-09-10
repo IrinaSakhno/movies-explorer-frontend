@@ -8,14 +8,14 @@ const Login = () => {
   return (
     <>
       <AuthHeader greeting="Рады видеть!" />
-      <section className="login">
+      <main className="login">
         <LoginForm button="Войти" />
         <AuthNavigation
           text="Ещё не зарегистрированы?"
           button="Регистрация"
           path="/signup"
         />
-      </section>
+      </main>
     </>
   );
 };

@@ -20,8 +20,8 @@ const AboutProject = () => {
               about:
                 "У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.",
             },
-          ].map((item) => (
-            <ProjectDetails name={item.name} about={item.about} />
+          ].map((item, index) => (
+            <ProjectDetails name={item.name} about={item.about} key={index} />
           ))}
         </ul>
 

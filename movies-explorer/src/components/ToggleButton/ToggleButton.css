@@ -1,8 +1,8 @@
-.toggle-button__container {
+.search__toggle-button-container {
     display: flex;
     gap: 14px;
 }
-.toggle-button {
+.search__toggle-button {
     position: relative;
     display: inline-block;
     width: 36px;
@@ -19,7 +19,7 @@
     transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
   }
   
-  .toggle-button::after {
+  .search__toggle-button::after {
     content: "";
   
     display: inline-block;
@@ -36,10 +36,16 @@
     transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
   }
   
-  .toggle-button:checked::after {
+  .search__toggle-button:checked::after {
     transform: translateX(calc(100% + 8px));
     background-color: #fff;
   }
-  .toggle-button:checked {
+  .search__toggle-button:checked {
     background-color: #2be080;
+  }
+
+  @media screen and (max-width: 767px) {
+    .search__toggle-button-container {
+      gap: 12px;
+    }
   }

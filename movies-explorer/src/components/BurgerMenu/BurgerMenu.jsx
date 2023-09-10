@@ -15,7 +15,7 @@ const BurgerMenu = () => {
         <div className="burger-menu__overlay"></div>
         <div className="burger-menu__container">
           <button onClick={closeBurgerMenu} className="burger-menu__close-button link" type="button"></button>
-          <div className="burger-menu__menu">
+          <nav className="burger-menu__menu">
             <NavLink
                 to="/"
                 className={({isActive}) => `burger-menu__link link ${isActive ? "burger-menu__link_active" : ""}`}
@@ -36,20 +36,20 @@ const BurgerMenu = () => {
             </NavLink>
             <div className="header-authorized__profile burger-menu__profile">
               <NavLink
-                to="profile"
+                to="/profile"
                 className="header-authorized__hyperlink header-authorized__hyperlink_active link"
               >
                 Аккаунт
               </NavLink>
-              <NavLink to="profile">
+              <NavLink to="/profile">
                 <img
                   src={AccountLogo}
-                  alt="account"
+                  alt="иконка аккаунта"
                   className="header-authorized__account-logo link"
                 />
               </NavLink>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </>

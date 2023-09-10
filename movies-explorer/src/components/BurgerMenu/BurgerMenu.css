@@ -35,8 +35,8 @@
         width: 22px;
         height: 22px;
         margin-top: 22.44px;
-        margin-right: 22.44px;
-        padding: 0;
+        margin-right: 17.44px;
+        padding: 16px;
         display: flex;
         align-self: flex-end;
         cursor: pointer;
@@ -53,8 +53,9 @@
         flex-direction: column;
         width: 340px;
         align-items: center;
-        margin: 105.44px auto 0;
+        margin: 107px auto 0;
         gap: 28px;
+        padding-left: 10px;
     }
 
     .burger-menu__link {
@@ -78,7 +79,7 @@
         margin-bottom: 92px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .burger-menu__container {
         width: 320px;
     }

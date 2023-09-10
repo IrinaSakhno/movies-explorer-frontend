@@ -5,29 +5,29 @@ import HeaderLink from "../HeaderLink/HeaderLink";
 
 const Header = () => {
   return (
-    <section className="header">
+    <header className="header">
       <div className="header__container">
-        <Link to="/">
-          <img src={HeaderLogo} alt="logo" className="header__logo" />
+        <Link to="/" className='header__logo-link'>
+          <img src={HeaderLogo} alt="логотип проекта" className="header__logo link" />
         </Link>
         <ul className="header__links">
           {[
             {
               name: "Войти",
               link: "/signin",
-              style: "header-link__name header-link header-link_green link",
+              style: "header__link-name header__link header__link_green link",
             },
             {
               name: "Регистрация",
               link: "/signup",
-              style: "header-link__name header-link link",
+              style: "header__link-name header__link  link",
             },
-          ].map((item) => (
-            <HeaderLink name={item.name} link={item.link} style={item.style} />
+          ].map((item, index) => (
+            <HeaderLink name={item.name} link={item.link} style={item.style} key={index} />
           ))}
         </ul>
       </div>
-    </section>
+    </header>
   );
 };
 

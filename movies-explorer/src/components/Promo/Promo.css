@@ -16,7 +16,7 @@
 }
 
 .promo__title {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 50px;
     line-height: 1.16;
     text-align: left;
@@ -27,6 +27,7 @@
 }
 
 .promo__description {
+    width: 310px;
     font-weight: 400;
     font-size: 13px;
     line-height: 1.23;
@@ -98,15 +99,15 @@
     }
 
     .promo__button {
-        margin-top: 102px;
+        margin-top: 91px;
         align-self: center;
     }
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .promo__container {
-        padding: 70px 10px 30px;
-        min-height: 640px;
+        padding: 70px 10px 0;
+        min-height: 568px;
         max-width: 292px;
     }
 
@@ -123,6 +124,7 @@
         max-width: 300px;
         font-size: 30px;
         line-height: 1.26;
+        letter-spacing: -1.2px;
     }
 
     .promo__description {
