@@ -160,6 +160,7 @@
     .portfolio__info {
         margin: 0 auto;
         max-width: 292px;
+        padding-left: 0;
     }
 
     .portfolio__title {
@@ -188,11 +189,13 @@
         line-height: 1.43;
         max-width: 292px;
         margin: 70px auto 0;
+        padding-left: 0;
     }
 
     .portfolio__links {
         margin: 40px auto 0;
         width: 292px;
+        padding-left: 0;
     }
 
 }
