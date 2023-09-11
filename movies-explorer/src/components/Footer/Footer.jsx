@@ -13,8 +13,8 @@ const Footer = () => {
           {[
             { name: "Яндекс.Практикум", link: "https://practicum.yandex.ru/" },
             { name: "Github", link: "https://github.com/IrinaSakhno/" },
-          ].map((item) => (
-            <FooterLink name={item.name} link={item.link} />
+          ].map((item, index) => (
+            <FooterLink name={item.name} link={item.link} key={index}  />
           ))}
         </ul>
       </div>

@@ -9,7 +9,7 @@ const ToggleButton = ({ label }) => {
         className="search__toggle-button"
         defaultChecked
       />
-      <label for="toggle-button" className="search__text">
+      <label htmlFor="toggle-button" className="search__text">
         {label}
       </label>
     </div>

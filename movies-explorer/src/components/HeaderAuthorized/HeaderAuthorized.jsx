@@ -16,10 +16,10 @@ const Header = () => {
             <BurgerMenu />
       <div className="header-authorized__container">
       <Link to="/"> 
-          <img src={HeaderLogo} alt="логотип проекта" className="header-authorized__logo" />
+          <img src={HeaderLogo} alt="логотип проекта" className="header-authorized__logo link" />
         </Link>
         <nav className="header-authorized__menu">
-          <nav className="header-authorized__links">
+          <ul className="header-authorized__links">
             <li className="header-authorized__link">
               <NavLink
                 to="/movies"
@@ -36,7 +36,7 @@ const Header = () => {
                 Сохранённые фильмы
               </NavLink>
             </li>
-          </nav>
+          </ul>
           <div className="header-authorized__profile">
             <NavLink
                 to="/profile"
@@ -55,7 +55,7 @@ const Header = () => {
             </NavLink>
           </div>
         </nav>
-        <button type="button" onClick={openBurgerMenu} className="header-authorized__burger-menu">
+        <button type="button" onClick={openBurgerMenu} className="header-authorized__burger-menu link">
         </button>
       </div>
     </header>

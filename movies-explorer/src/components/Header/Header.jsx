@@ -10,22 +10,24 @@ const Header = () => {
         <Link to="/" className='header__logo-link'>
           <img src={HeaderLogo} alt="логотип проекта" className="header__logo link" />
         </Link>
-        <ul className="header__links">
-          {[
-            {
-              name: "Войти",
-              link: "/signin",
-              style: "header__link-name header__link header__link_green link",
-            },
-            {
-              name: "Регистрация",
-              link: "/signup",
-              style: "header__link-name header__link  link",
-            },
-          ].map((item, index) => (
-            <HeaderLink name={item.name} link={item.link} style={item.style} key={index} />
-          ))}
-        </ul>
+        <nav className='header__menu'>
+          <ul className="header__links">
+            {[
+              {
+                name: "Войти",
+                link: "/signin",
+                style: "header__link-name header__link header__link_green link",
+              },
+              {
+                name: "Регистрация",
+                link: "/signup",
+                style: "header__link-name header__link header__link_registration link",
+              },
+            ].map((item, index) => (
+              <HeaderLink name={item.name} link={item.link} style={item.style} key={index} />
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   );

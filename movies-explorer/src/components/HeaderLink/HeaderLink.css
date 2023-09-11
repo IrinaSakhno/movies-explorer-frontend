@@ -51,4 +51,8 @@
         line-height: 1.6;
 
     }
+
+    .header__link_registration {
+        width: 65px;
+    }
 }
