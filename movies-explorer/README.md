@@ -1,0 +1,1 @@
+Макет [dark-4](https://www.figma.com/file/mX3VjVDuVTjotztwXFj7X4/dark-4?type=design&node-id=891%3A3857&mode=dev)

@@ -1,0 +1,201 @@
+.portfolio {
+    padding: 110px 0 116px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.portfolio__about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 66px;
+    gap: 50px;
+}
+
+.portfolio__avatar {
+    width: 270px;
+    height: 327px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.portfolio__info {
+    max-width: 600px;
+}
+
+.portfolio__title {
+    color: #FFF;
+    text-align: left;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.portfolio__profession {
+    color: #FFF;
+    text-align: left;
+    font-size: 18px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-weight: 500;
+    line-height: 1.11;
+    margin: 18px 0 0;
+}
+
+.portfolio__description {
+    color: #FFF;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    font-feature-settings: 'clig' off, 'liga' off;
+    line-height: 1.57;
+    margin: 26px 0 0;
+}
+
+.portfolio__github {
+    margin: 54px 0 0;
+}
+
+.portfolio__hyperlink{
+    color: #FFF;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.21;
+    text-decoration: none;
+}
+
+.portfolio__subtitle {
+    color: #8B8B8B;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.11;
+    font-feature-settings: 'clig' off, 'liga' off;
+    max-width: 250px;
+    margin: 100px 0 0;
+}
+
+.portfolio__links {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin: 49px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1279px) {
+    .portfolio {
+        padding: 85px 0 81px;
+        max-width: 680px;
+    }
+
+    .portfolio__about {
+        gap: 40px;
+    }
+    
+    .portfolio__avatar {
+        width: 253px;
+        height: 307px;
+        padding-right: 7px;
+    }
+
+    .portfolio__info {
+        max-width: 348px;
+        padding-left: 6px;
+    }
+
+    .portfolio__title {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -1.6px;
+    }
+
+    .portfolio__profession {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 16px;
+    }
+
+    .portfolio__description {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 20px;
+    }
+
+    .portfolio__github {
+        margin-top: 33px;
+    }
+
+    .portfolio__subtitle {
+        margin-top: 91px;
+        padding-left: 6px;
+    }
+
+    .portfolio__links {
+        padding: 0 6px;
+    }
+}
+  
+@media screen and (max-width: 767px) {
+    .portfolio {
+        padding: 68px 0 70px;
+        max-width: 292px;
+    }
+
+    .portfolio__avatar {
+        min-width: 292px;
+        height: 352px;
+        margin: 0 auto;
+    }
+
+    .portfolio__about {
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    .portfolio__info {
+        margin: 0 auto;
+        max-width: 292px;
+        padding-left: 0;
+    }
+
+    .portfolio__title {
+        font-size: 30px;
+        line-height: 1.21;
+        letter-spacing: -1.2px;
+    }
+
+    .portfolio__profession {
+        font-size: 11px;
+        line-height: 1.45;
+        margin-top: 20px;
+    }
+
+    .portfolio__description {
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+    .portfolio__github {
+        margin-top: 40px;
+    }
+
+    .portfolio__subtitle {
+        font-size: 14px;
+        line-height: 1.43;
+        max-width: 292px;
+        margin: 70px auto 0;
+        padding-left: 0;
+    }
+
+    .portfolio__links {
+        margin: 40px auto 0;
+        width: 292px;
+        padding-left: 0;
+    }
+
+}

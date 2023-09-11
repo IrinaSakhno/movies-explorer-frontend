@@ -1,0 +1,13 @@
+@import url("./vendor/normalize.css");
+@import url("./vendor/fonts/fonts.css");
+@import url("./components/App/App.css");
+
+.link {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.link:hover {
+    opacity: 0.75;
+    transition: opacity 0.1s ease;
+}

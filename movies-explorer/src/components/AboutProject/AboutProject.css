@@ -1,0 +1,130 @@
+.about-project {
+    padding: 110px 0;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.about-project__steps {
+    list-style-type: none;
+    padding-inline-start: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 70px 0 0;
+}
+
+.about-project__step-name {
+    padding: 0;
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    letter-spacing: -0.8px;
+}
+
+.about-project__step-description {
+    line-height: 1.43;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+}
+
+.about-project__plan {
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.21;
+    margin-top: 110px;
+}
+
+.about-project__time {
+    background: #303030;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.about-project__time_green {
+    background: #3DDC84;
+}
+ 
+.about-project__plan-step {
+    color: #8B8B8B;
+    margin: 14px 0 0;
+}
+
+.about-project__frontend {
+    flex: 4;
+    color: #fff;
+}
+
+.about-project__backend {
+    flex: 1;
+    color: #000;
+}
+
+@media screen and (max-width: 1279px) {
+    .about-project {
+        padding: 85px 0;
+        max-width: 680px;
+    }
+
+    .about-project__steps {
+        gap: 30px;
+        max-width: 668px;
+        padding-left: 6px;
+    }
+
+    .about-project__step-description {
+        line-height: 1.5;
+        font-size: 12px;
+    }
+
+    .about-project__plan {
+        margin: 93px 6px 0;
+        max-width: 708px;
+    }
+    .about-project__frontend {
+        flex: 3.77;
+    }
+}
+  
+@media screen and (max-width: 767px) {
+    .about-project {
+        padding: 70px 0;
+        max-width: 282px;
+    }
+    
+    .about-project__steps {
+        margin-top: 60px;
+        flex-direction: column;
+        gap: 56px;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .about-project__plan {
+        font-size: 11px;
+        margin: 61px auto 0;
+        max-width: 294px;
+    }
+
+    .about-project__step-name {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+
+    .about-project__frontend {
+        flex: 1.84;
+    }
+
+    .about-project__plan-step {
+        margin-top: 8px;
+    }
+}

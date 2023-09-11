@@ -1,0 +1,110 @@
+.movie {
+  width: 360px;
+  min-height: 319px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  border-radius: 6px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+  list-style: none;
+}
+
+.movie__link {
+  text-decoration: none;
+}
+.movie__about {
+  display: flex;
+  gap: 14px;
+  margin: 17px;
+  justify-content: space-between;
+}
+
+.movie__title {
+  max-width: 240px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: right;
+  margin: 0;
+}
+
+.movie__length {
+  max-width: 70px;
+  color: #8b8b8b;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.38;
+  margin: 0;
+}
+
+.movie__screenshot {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.movie__button {
+  width: 100px;
+  height: 29px;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+  margin: 16px auto;
+}
+
+.movie__button_delete {
+	background: url('../../images/delete-button.svg') center no-repeat;
+}
+
+.movie__button_save {
+	background: url('../../images/save-button.svg') center no-repeat;
+}
+
+.movie__button_saved {
+	background: url('../../images/saved-button.svg') center no-repeat;
+}
+
+@media screen and (max-width: 1279px) {
+  .movie {
+    width: 342px;
+    min-height: 309px;
+  }
+  .movie__about {
+    gap: 12px;
+  }
+  .movie__screenshot {
+    width: 342px;
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .movie {
+    width: 300px;
+    min-height: 271px;
+  }
+  .movie__about {
+    gap: 22px;
+    margin: 14px;
+  }
+  .movie__title {
+    max-width: 200px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .movie__length {
+    max-width: 50px;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .movie__screenshot {
+    width: 300px;
+    height: 168px;
+  }
+  .movie__button {
+    margin-top: 10px;
+  }
+}
