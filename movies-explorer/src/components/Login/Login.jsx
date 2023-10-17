@@ -4,12 +4,12 @@ import AuthHeader from "../AuthHeader/AuthHeader";
 import LoginForm from "../LoginForm/LoginForm";
 import AuthNavigation from "../AuthNavigation/AuthNavigation";
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   return (
     <>
       <AuthHeader greeting="Рады видеть!" />
       <main className="login">
-        <LoginForm button="Войти" />
+        <LoginForm button="Войти" onSubmit={onLogin} />
         <AuthNavigation
           text="Ещё не зарегистрированы?"
           button="Регистрация"

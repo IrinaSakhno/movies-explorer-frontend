@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import "./BurgerMenu.css";
 import AccountLogo from "../../images/account-logo.svg";
 
@@ -14,23 +14,39 @@ const BurgerMenu = () => {
       <div className="burger-menu" id="burger-menu">
         <div className="burger-menu__overlay"></div>
         <div className="burger-menu__container">
-          <button onClick={closeBurgerMenu} className="burger-menu__close-button link" type="button"></button>
+          <button
+            onClick={closeBurgerMenu}
+            className="burger-menu__close-button link"
+            type="button"
+          ></button>
           <nav className="burger-menu__menu">
             <NavLink
-                to="/"
-                className={({isActive}) => `burger-menu__link link ${isActive ? "burger-menu__link_active" : ""}`}
+              to="/"
+              className={({ isActive }) =>
+                `burger-menu__link link ${
+                  isActive ? "burger-menu__link_active" : ""
+                }`
+              }
             >
               Главная
             </NavLink>
             <NavLink
-                to="/movies"
-                className={({isActive}) => `burger-menu__link link ${isActive ? "burger-menu__link_active" : ""}`}
+              to="/movies"
+              className={({ isActive }) =>
+                `burger-menu__link link ${
+                  isActive ? "burger-menu__link_active" : ""
+                }`
+              }
             >
               Фильмы
             </NavLink>
             <NavLink
-                to="/saved-movies"
-                className={({isActive}) => `burger-menu__link link ${isActive ? "burger-menu__link_active" : ""}`}
+              to="/saved-movies"
+              className={({ isActive }) =>
+                `burger-menu__link link ${
+                  isActive ? "burger-menu__link_active" : ""
+                }`
+              }
             >
               Сохранённые фильмы
             </NavLink>

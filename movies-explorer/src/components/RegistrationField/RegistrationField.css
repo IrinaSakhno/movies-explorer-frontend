@@ -42,12 +42,12 @@
     font-weight: 400;
     line-height: 1.21;
     margin-top: 6px;
-    display: none;
+    /* display: none; */
 }
 
-.registration-field__input-error_active {
+/* .registration-field__input-error_active {
     display: block;
-}
+} */
 
 
 

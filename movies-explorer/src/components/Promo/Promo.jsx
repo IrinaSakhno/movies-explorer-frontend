@@ -21,7 +21,14 @@ const Promo = () => {
             className="promo__logo"
           />
         </div>
-        <a href="https://github.com/IrinaSakhno/" className="promo__button link" target="_blank" rel="noreferrer">Узнать больше</a>
+        <a
+          href="https://github.com/IrinaSakhno/"
+          className="promo__button link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Узнать больше
+        </a>
       </div>
     </section>
   );

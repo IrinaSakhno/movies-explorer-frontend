@@ -23,6 +23,12 @@
     margin-top: 128px;
 }
 
+.registration-form__submit-button_disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+}
+
 .registration-form__submit-button_signin {
     margin-top: 196px;
 }
