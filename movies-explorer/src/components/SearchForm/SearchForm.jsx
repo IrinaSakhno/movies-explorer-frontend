@@ -40,7 +40,8 @@ const SearchForm = ({ search, setSearch, onSearch, isShort, setIsShort }) => {
             minLength="2"
             maxLength="40"
             onChange={handleChange}
-            value={search.text}
+            // value={search.text}
+            value={localStorage.getItem('search')}
             required
           />
           <button className="search__submit-button link">Поиск</button>

@@ -15,7 +15,6 @@ const Movies = ({
   isConnectionError,
 }) => {
 
-  
   const [isShort, setIsShort] = useState(
     localStorage.getItem("isShort") === "true",
   );
@@ -34,8 +33,8 @@ const Movies = ({
         movie.nameRU.toLowerCase().includes(search.toLowerCase()) ||
         movie.nameEN.toLowerCase().includes(search.toLowerCase());
       return isShort
-        ? filteredMovieInclude
-        : movie.duration < 40 && filteredMovieInclude;
+        ? movie.duration < 40 && filteredMovieInclude
+        : filteredMovieInclude;
     });
 
     setFilteredMovies(movies);

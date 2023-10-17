@@ -20,6 +20,24 @@ const MoviesCardList = ({
   const [paginate, setPaginate] = useState(0);
   const [moreButton, setMoreButton] = useState(false);
 
+  const changePaginate = () => {
+    if (window.innerWidth < 751) {
+      setPaginate(5);
+      return;
+    } else if (window.innerWidth > 752 && window.innerWidth < 1191) {
+      setPaginate(8);
+      return;
+    } else {
+      setPaginate(12);
+      return;
+    }
+  };
+
+  const onMore = () => {
+    if (window.innerWidth >= 1191) return setPaginate(paginate + 3);
+    else if (window.innerWidth < 1191) return setPaginate(paginate + 2);
+  };
+
   useEffect(() => {
     changePaginate();
   }, []);
@@ -28,21 +46,12 @@ const MoviesCardList = ({
     if (cards.length === 0) {
       setMoreButton(false);
     }
-    if (paginate >= cards.length) setMoreButton(false);
-    else return setMoreButton(true);
+    if (paginate >= cards.length) {
+      setMoreButton(false);
+    } else {
+      return setMoreButton(true);
+    }
   }, [cards, paginate]);
-
-  const changePaginate = () => {
-    if (window.innerWidth >= 1191) return setPaginate(12);
-    else if (window.innerWidth < 1191 && window.innerWidth <= 751)
-      return setPaginate(8);
-    else if (window.innerWidth < 751) return setPaginate(5);
-  };
-
-  const onMore = () => {
-    if (window.innerWidth >= 1191) return setPaginate(paginate + 3);
-    else if (window.innerWidth < 1191) return setPaginate(paginate + 2);
-  };
 
   return (
     <section className="movies-list">
