@@ -28,7 +28,6 @@ const RegistrationForm = ({ button, onSubmit }) => {
         email: "Введите email в формате address@domain.com",
       });
     }
-    console.log(JSON.stringify(errors));
   };
 
   const handleNameChange = (evt) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
@@ -17,6 +17,7 @@ import { MOVIE_IMAGE_URL } from "../../constants/urls";
 
 function App() {
   const navigate = useNavigate();
+  const path = useLocation();
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -191,7 +192,7 @@ function App() {
     main
       .addMovie(movieObject)
       .then((userMovie) => {
-        setSavedMovies([userMovie, ...savedMovies]);
+        setSavedMovies([...savedMovies, userMovie.movie]);
       })
       .catch((err) => {
         console.log(err);
@@ -201,9 +202,13 @@ function App() {
 
   // Remove a movie:
   const handleDeleteMovie = (movie) => {
-    const movieToBeRemoved = savedMovies.find(
-      (m) => movie.id.toString() === m.movieId || movie.movieId === m.movieId,
-    );
+    const movieToBeRemoved = savedMovies.find((m) => {
+      if (path.pathname === "/movies") {
+        return movie.id.toString() === m.movieId;
+      } else {
+        return movie.movieId === m.movieId;
+      }
+    });
     setIsConnectionError(false);
     main
       .removeMovie(movieToBeRemoved._id.toString())

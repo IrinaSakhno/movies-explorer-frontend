@@ -13,7 +13,7 @@ const SavedMovies = ({
   onSave,
   isConnectionError,
 }) => {
-  const [isShort, setIsShort] = useState(true);
+  const [isShort, setIsShort] = useState(false);
 
   const [search, setSearch] = useState("");
 
@@ -29,8 +29,8 @@ const SavedMovies = ({
         movie.nameRU.toLowerCase().includes(filterString.toLowerCase()) ||
         movie.nameEN.toLowerCase().includes(filterString.toLowerCase());
       return isShort
-        ? filtredMovieInclude
-        : movie.duration < 40 && filtredMovieInclude;
+        ? movie.duration < 40 && filtredMovieInclude
+        : filtredMovieInclude;
     });
   }, [filterString, isShort, savedMoviesList]);
 

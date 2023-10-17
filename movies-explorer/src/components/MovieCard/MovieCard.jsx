@@ -8,7 +8,10 @@ const MovieCard = ({ movieCard, onSave, onDelete, savedMovies }) => {
   const path = useLocation();
 
   const isLiked = useMemo(() => {
-    return savedMovies.some((m) => m.movieId === movieCard.id.toString());
+    if (path.pathname === "/movies") {
+      return savedMovies.some((m) => m.movieId === movieCard.id.toString());
+    }
+    return false;
   }, [movieCard, savedMovies]);
 
   const handleSave = () => {

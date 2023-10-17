@@ -3,7 +3,14 @@ import "./SearchForm.css";
 import ToggleButton from "../ToggleButton/ToggleButton";
 import { useState } from "react";
 
-const SearchForm = ({ search, setSearch, onSearch, isShort, setIsShort }) => {
+const SearchForm = ({
+  search,
+  setSearch,
+  onSearch,
+  isShort,
+  setIsShort,
+  isSearchStarted,
+}) => {
   const [isEmptySearch, setIsEmptySearch] = useState(false);
 
   const handleChange = (e) => {
@@ -11,7 +18,7 @@ const SearchForm = ({ search, setSearch, onSearch, isShort, setIsShort }) => {
   };
 
   const handleCheckbox = () => {
-    onSearch(!isShort);
+    isSearchStarted && onSearch(!isShort);
     setIsShort(!isShort);
   };
 
@@ -40,8 +47,7 @@ const SearchForm = ({ search, setSearch, onSearch, isShort, setIsShort }) => {
             minLength="2"
             maxLength="40"
             onChange={handleChange}
-            // value={search.text}
-            value={localStorage.getItem('search')}
+            value={search}
             required
           />
           <button className="search__submit-button link">Поиск</button>
