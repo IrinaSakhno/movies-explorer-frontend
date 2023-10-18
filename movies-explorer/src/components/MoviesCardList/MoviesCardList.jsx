@@ -4,6 +4,14 @@ import Preloader from "../Preloader/Preloader";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useCallback } from "react";
+import {
+  RENDER_MOVIES_BIG_SCREEN,
+  RENDER_MOVIES_MIDDLE_SCREEN,
+  RENDER_MOVIES_SMALL_SCREEN,
+  MORE_MOVIES_BIG_SCREEN,
+  MORE_MOVIES_MIDDLE_SCREEN,
+  MORE_MOVIES_SMALL_SCREEN,
+} from "../../constants/movies";
 
 const MoviesCardList = ({
   isLoading,
@@ -29,25 +37,30 @@ const MoviesCardList = ({
     }
 
     if (window.innerWidth < 751) {
-      !savedMoviesPath && setPaginate(5);
+      !savedMoviesPath && setPaginate(RENDER_MOVIES_SMALL_SCREEN);
       return;
     } else if (window.innerWidth > 752 && window.innerWidth < 1191) {
-      !savedMoviesPath && setPaginate(8);
+      !savedMoviesPath && setPaginate(RENDER_MOVIES_MIDDLE_SCREEN);
       return;
     } else {
-      !savedMoviesPath && setPaginate(12);
+      !savedMoviesPath && setPaginate(RENDER_MOVIES_BIG_SCREEN);
       return;
     }
   }, [setPaginate, savedMoviesPath]);
 
   const onMore = () => {
-    if (window.innerWidth >= 1191) return setPaginate(paginate + 3);
-    else if (window.innerWidth < 1191) return setPaginate(paginate + 2);
+    if (window.innerWidth < 751) { 
+      return setPaginate(paginate + MORE_MOVIES_SMALL_SCREEN);
+    } else if (window.innerWidth > 752 && window.innerWidth < 1191) {
+      return setPaginate(paginate + MORE_MOVIES_MIDDLE_SCREEN);
+    } else {
+      return setPaginate(paginate + MORE_MOVIES_BIG_SCREEN);
+    }
   };
 
   useEffect(() => {
     changePaginate();
-  }, [changePaginate]);
+  }, [changePaginate, filteredMovies]);
 
   useEffect(() => {
     if (cards.length === 0) {
@@ -71,7 +84,7 @@ const MoviesCardList = ({
 
       {isLoading && <Preloader />}
 
-      {!isConnectionError && (
+      {!isConnectionError && !isLoading && (
         <>
           {cards.length === 0 ? (
             <p className="movies__no-result">Ничего не найдено</p>
@@ -91,18 +104,20 @@ const MoviesCardList = ({
           )}
         </>
       )}
+    {!isLoading && 
+          <div className="movies__more-button-container">
+          {path.pathname === "/movies" && moreButton && (
+            <button
+              className="movies-list__button link"
+              type="button"
+              onClick={onMore}
+            >
+              Еще
+            </button>
+          )}
+        </div>
+    }
 
-      <div className="movies__more-button-container">
-        {path.pathname === "/movies" && moreButton && (
-          <button
-            className="movies-list__button link"
-            type="button"
-            onClick={onMore}
-          >
-            Еще
-          </button>
-        )}
-      </div>
     </section>
   );
 };

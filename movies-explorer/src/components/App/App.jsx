@@ -133,25 +133,25 @@ function App() {
 
   // MOVIES:
 
-  useEffect(() => {
-    function loadAllMovies() {
-      setIsLoading(true);
-      setIsConnectionError(false);
-      movies
-        .getMovies()
-        .then((data) => {
-          setMoviesList(data);
-        })
-        .catch((err) => {
-          console.log(err);
-          setIsConnectionError(true);
-        })
-        .finally(() => {
-          setIsLoading(false);
-        });
-    }
+  const loadAllMovies = () => {
+    setIsLoading(true);
+    setIsConnectionError(false);
+    movies
+      .getMovies()
+      .then((data) => {
+        setMoviesList(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsConnectionError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
 
-    function loadSavedMovies() {
+  useEffect(() => {
+    const loadSavedMovies = () => {
       setIsLoading(true);
       setIsConnectionError(false);
       main
@@ -166,9 +166,9 @@ function App() {
         .finally(() => {
           setIsLoading(false);
         });
-    }
+    };
+
     if (isLoggedIn) {
-      loadAllMovies();
       loadSavedMovies();
     }
   }, [isLoggedIn]);
@@ -214,7 +214,7 @@ function App() {
       .removeMovie(movieToBeRemoved._id.toString())
       .then((removedMovie) => {
         setSavedMovies((state) =>
-          state.filter((item) => item._id !== removedMovie._id),
+          state.filter((item) => item._id !== removedMovie._id)
         );
       })
       .catch((err) => {
@@ -257,6 +257,7 @@ function App() {
                 onDelete={handleDeleteMovie}
                 onSave={handleSaveMovie}
                 isConnectionError={isConnectionError}
+                loadAllMovies={loadAllMovies}
               />
             }
           />

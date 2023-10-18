@@ -1,10 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Movies.css";
 import Footer from "../Footer/Footer";
 import HeaderAuthorized from "../HeaderAuthorized/HeaderAuthorized";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import { SHORT_MOVIE_DURATION } from "../../constants/movies";
 
 const Movies = ({
   savedMovies,
@@ -13,6 +14,7 @@ const Movies = ({
   onDelete,
   onSave,
   isConnectionError,
+  loadAllMovies
 }) => {
   const [isShort, setIsShort] = useState(
     localStorage.getItem("isShort") === "true",
@@ -35,7 +37,7 @@ const Movies = ({
         movie.nameRU.toLowerCase().includes(search.toLowerCase()) ||
         movie.nameEN.toLowerCase().includes(search.toLowerCase());
       return isShort
-        ? movie.duration < 40 && filteredMovieInclude
+        ? movie.duration < SHORT_MOVIE_DURATION && filteredMovieInclude
         : filteredMovieInclude;
     });
 
@@ -46,6 +48,14 @@ const Movies = ({
     setIsSearchStarted(true);
     localStorage.setItem("isSearchStarted", true);
   }
+
+  useEffect(() => {
+
+    if (isSearchStarted) {
+      loadAllMovies();
+
+    }
+  }, [isSearchStarted]);
 
   return (
     <>

@@ -3,7 +3,6 @@ import { useState } from "react";
 import "../RegistrationForm/RegistrationForm.css";
 import "./LoginForm.css";
 import RegistrationField from "../RegistrationField/RegistrationField";
-import classNames from "classnames";
 import { EMAIL_REGEX } from "../../constants/regex";
 
 const LoginForm = ({ button, onSubmit }) => {
@@ -98,11 +97,10 @@ const LoginForm = ({ button, onSubmit }) => {
             </p>
             <button
               type="submit"
-              className={classNames(
-                "registration-form__submit-button",
-                "link",
-                !isValid && "registration-form__submit-button_disabled",
-              )}
+              className={
+                !isValid ? "registration-form__submit-button link registration-form__submit-button_disabled"
+                : "registration-form__submit-button link"
+              }
               disabled={!isValid}
             >
               {button}

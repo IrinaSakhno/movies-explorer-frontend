@@ -29,6 +29,7 @@ const SearchForm = ({
     }
     setIsEmptySearch(false);
     onSearch(isShort);
+
   };
 
   return (

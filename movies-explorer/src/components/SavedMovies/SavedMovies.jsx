@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import HeaderAuthorized from "../HeaderAuthorized/HeaderAuthorized";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import { SHORT_MOVIE_DURATION } from "../../constants/movies";
 
 const SavedMovies = ({
   savedMoviesList,
@@ -29,7 +30,7 @@ const SavedMovies = ({
         movie.nameRU.toLowerCase().includes(filterString.toLowerCase()) ||
         movie.nameEN.toLowerCase().includes(filterString.toLowerCase());
       return isShort
-        ? movie.duration < 40 && filtredMovieInclude
+        ? movie.duration < SHORT_MOVIE_DURATION && filtredMovieInclude
         : filtredMovieInclude;
     });
   }, [filterString, isShort, savedMoviesList]);

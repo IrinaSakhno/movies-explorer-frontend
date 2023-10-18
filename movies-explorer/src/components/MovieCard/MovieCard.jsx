@@ -1,7 +1,6 @@
 import "./MovieCard.css";
 import { MOVIE_IMAGE_URL } from "../../constants/urls";
 import { useLocation } from "react-router-dom";
-import classNames from "classnames";
 import { useMemo } from "react";
 
 const MovieCard = ({ movieCard, onSave, onDelete, savedMovies }) => {
@@ -62,11 +61,10 @@ const MovieCard = ({ movieCard, onSave, onDelete, savedMovies }) => {
         />
       ) : (
         <button
-          className={classNames(
-            "movie__button",
-            "link",
-            isLiked ? "movie__button_saved" : "movie__button_save",
-          )}
+          className={
+            isLiked ? "movie__button link movie__button_saved"
+            : "movie__button link movie__button_save"
+          }
           type="button"
           onClick={isLiked ? handleDelete : handleSave}
         />
