@@ -40,17 +40,18 @@ const Movies = ({
         ? movie.duration < SHORT_MOVIE_DURATION && filteredMovieInclude
         : filteredMovieInclude;
     });
-
+    setIsSearchStarted(true);
     setFilteredMovies(movies);
     localStorage.setItem("isShort", isShort);
     localStorage.setItem("filteredMovies", JSON.stringify(movies));
     localStorage.setItem("search", search);
-    setIsSearchStarted(true);
     localStorage.setItem("isSearchStarted", true);
   }
 
   useEffect(() => {
-      loadAllMovies();
+      if (isSearchStarted) {
+         loadAllMovies();
+      }
   }, [isSearchStarted]);
 
   return (

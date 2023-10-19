@@ -11,6 +11,9 @@ import {
   MORE_MOVIES_BIG_SCREEN,
   MORE_MOVIES_MIDDLE_SCREEN,
   MORE_MOVIES_SMALL_SCREEN,
+  SCREEN_BREAKPOINT_MAX,
+  SCREEN_BREAKPOINT_MIDDLE,
+  SCREEN_BREAKPOINT_MIN
 } from "../../constants/movies";
 
 const MoviesCardList = ({
@@ -36,10 +39,10 @@ const MoviesCardList = ({
       return;
     }
 
-    if (window.innerWidth < 751) {
+    if (window.innerWidth < SCREEN_BREAKPOINT_MIN) {
       !savedMoviesPath && setPaginate(RENDER_MOVIES_SMALL_SCREEN);
       return;
-    } else if (window.innerWidth > 752 && window.innerWidth < 1191) {
+    } else if (window.innerWidth > SCREEN_BREAKPOINT_MIDDLE && window.innerWidth < SCREEN_BREAKPOINT_MAX) {
       !savedMoviesPath && setPaginate(RENDER_MOVIES_MIDDLE_SCREEN);
       return;
     } else {
@@ -49,9 +52,10 @@ const MoviesCardList = ({
   }, [setPaginate, savedMoviesPath]);
 
   const onMore = () => {
-    if (window.innerWidth < 751) { 
+    if (window.innerWidth < SCREEN_BREAKPOINT_MIN) { 
       return setPaginate(paginate + MORE_MOVIES_SMALL_SCREEN);
-    } else if (window.innerWidth > 752 && window.innerWidth < 1191) {
+    } else if (window.innerWidth > SCREEN_BREAKPOINT_MIDDLE
+       && window.innerWidth < SCREEN_BREAKPOINT_MAX) {
       return setPaginate(paginate + MORE_MOVIES_MIDDLE_SCREEN);
     } else {
       return setPaginate(paginate + MORE_MOVIES_BIG_SCREEN);
