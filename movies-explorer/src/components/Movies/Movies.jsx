@@ -50,11 +50,7 @@ const Movies = ({
   }
 
   useEffect(() => {
-
-    if (isSearchStarted) {
       loadAllMovies();
-
-    }
   }, [isSearchStarted]);
 
   return (
