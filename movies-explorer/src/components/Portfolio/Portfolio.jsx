@@ -29,7 +29,8 @@ const Portfolio = () => {
             <a
               href="https://github.com/IrinaSakhno/"
               className="portfolio__hyperlink"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               Github
             </a>

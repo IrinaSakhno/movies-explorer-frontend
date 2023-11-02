@@ -1,7 +1,15 @@
 import React from "react";
 import "./RegistrationField.css";
 
-const RegistrationField = ({ label, name, placeholder, type, pattern, error }) => {
+const RegistrationField = ({
+  label,
+  name,
+  placeholder,
+  type,
+  errors,
+  handleChange,
+  values,
+}) => {
   return (
     <>
       <div className="registration-field">
@@ -14,9 +22,14 @@ const RegistrationField = ({ label, name, placeholder, type, pattern, error }) =
           minLength="2"
           maxLength="40"
           required
-          pattern={pattern}
+          onChange={handleChange}
+          value={values[name] || ""}
         />
-        <span className="registration-field__input-error">{error}</span>
+        {errors && (
+          <span className="registration-field__input-error">
+            {errors[name]}
+          </span>
+        )}
       </div>
     </>
   );

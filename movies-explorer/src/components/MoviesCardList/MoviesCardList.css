@@ -31,6 +31,10 @@
 	color: #fff;
 }
 
+.movies-list__connection-error {
+  width: 50%;
+}
+
 @media screen and (max-width: 1279px) {
   .movies-list__list {
     grid-template-columns: repeat(2, 342px);
