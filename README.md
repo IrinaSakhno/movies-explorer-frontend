@@ -1,4 +1,4 @@
-<h1 align="left">📍 Дипломная работы "Movies Explorer"</h1>
+<h1 align="left">📍 Дипломная работа "Movies Explorer"</h1>
 
 <div align="left">
   <a href="https://movies-explorer.isakhno.nomoreparties.co/">
